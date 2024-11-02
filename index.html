@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔羅牌占卜</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Add system clock display -->
+        <div class="system-clock" id="systemClock"></div>
+        
+        <!-- 左側聊天區域1 -->
+        <div class="chat-section">
+            <div class="chat-container">
+                <div class="chat-history" id="chatHistory">
+                    <!-- 聊天記錄將在這裡動態顯示 -->
+                </div>
+                <div class="user-input">
+                    <textarea id="userQuestion" placeholder="請輸入您的問題..."></textarea>
+                    <button id="sendQuestion" class="btn-primary">發送</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右側塔羅牌區域 -->
+        <div class="tarot-section">
+            <!-- 牌陣選擇 -->
+            <div class="spread-selector">
+                <h2>選擇牌陣</h2>
+                <select id="spreadSelector" class="spread-select">
+                    <option value="single">單張牌陣</option>
+                    <option value="three">三張牌陣</option>
+                    <option value="celtic">凱爾特十字牌陣</option>
+                </select>
+                <div id="spreadDescription" class="spread-description"></div>
+            </div>
+
+            <!-- 卡牌選擇區域 - removed orientation controls -->
+            <div class="card-selection">
+                <div class="cards-grid" id="cardsGrid">
+                    <!-- 卡牌將在這裡動態顯示 -->
+                </div>
+            </div>
+
+            <!-- 已選卡牌顯示區域 -->
+            <div class="selected-cards-container">
+                <h3>已選擇的卡牌</h3>
+                <div class="selected-cards" id="selectedCards"></div>
+            </div>
+
+            <!-- 解牌結果區域 -->
+            <div class="reading-result" id="readingResult"></div>
+        </div>
+    </div>
+
+    <div class="attribution">
+VTC Student FYP AY2425    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
